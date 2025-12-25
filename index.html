@@ -31,7 +31,7 @@
             padding: 20px;
         }
 
-        /* HERO SECTION COM A FOTO */
+        /* HERO SECTION */
         .hero {
             background: linear-gradient(135deg, var(--azul-escuro) 0%, #1a2a4e 100%);
             padding: 60px 0;
@@ -97,8 +97,26 @@
         .cta-button:hover { transform: scale(1.05); background-color: #ffd740; }
 
         /* SEÇÕES */
-        .section { padding: 80px 0; text-align: center; }
-        .section h2 { font-size: 2.5em; color: var(--amarelo-ouro); margin-bottom: 40px; }
+        .section { padding: 60px 0; text-align: center; }
+        .section h2 { font-size: 2.2em; color: var(--amarelo-ouro); margin-bottom: 30px; }
+
+        /* VÍDEO AJUSTADO (MENOR ALTURA E LARGURA) */
+        .video-wrapper {
+            max-width: 500px; /* Largura menor */
+            margin: 0 auto;
+            border-radius: 15px;
+            border: 2px solid var(--azul-neon);
+            box-shadow: 0 0 25px rgba(0,0,0,0.5);
+            overflow: hidden;
+            background: #000;
+            line-height: 0; /* Remove espaços abaixo do vídeo */
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            height: auto; /* Deixa a altura proporcional ao arquivo real */
+            max-height: 400px; /* Limite máximo de altura */
+        }
 
         .benefits-grid {
             display: grid;
@@ -126,6 +144,7 @@
         @media (max-width: 768px) {
             .hero-flex { text-align: center; }
             .event-title { font-size: 2.5em; }
+            .video-wrapper { max-width: 90%; }
         }
     </style>
 </head>
@@ -135,13 +154,13 @@
         <div class="container">
             <div class="hero-flex">
                 <div class="hero-text">
-                    <div class="hero-quote">“Uma mente sábia pode curar um corpo doente.”</div>
+                    <div class="hero-quote">“Uma mente sábia pode curar um corpo doente. 
+Mas uma mente doente pode matar um corpo saudável.”</div>
                     <h1 class="event-title">O PODER</h1>
                     <h2 class="event-subtitle">DA MENTE</h2>
                     <p style="font-size: 1.4em; color: var(--amarelo-ouro); font-weight: bold;">Maracanaú - CE</p>
                     <p style="font-size: 1.2em; margin-bottom: 30px;">31 de Janeiro de 2026</p>
-                    <a href="https://pay.kiwify.com.br/d17LLzo" class="cta-button">RESERVAR MINHA VAGA
-</a>
+                    <a href="https://pay.kiwify.com.br/d17LLzo" class="cta-button">RESERVAR MINHA VAGA</a>
                 </div>
                 <div class="hero-image">
                     <img src="mentor.jpg" alt="Mentora Instituto Gênova">
@@ -149,6 +168,18 @@
             </div>
         </div>
     </header>
+
+    <section class="section" style="background-color: rgba(0,0,0,0.2);">
+        <div class="container">
+            <h2>Conheça a Experiência</h2>
+            <div class="video-wrapper">
+                <video controls poster="thumb.jpg">
+                    <source src="apresentacao.mp4" type="video/mp4">
+                    Seu navegador não suporta a tag de vídeo.
+                </video>
+            </div>
+        </div>
+    </section>
 
     <section class="section">
         <div class="container">
@@ -179,8 +210,8 @@
     </section>
 
     <footer>
-        <p><strong>INSTITUTO GÊNOVA</strong></p>
-        <p>© 2026 - Maracanaú, Ceará</p>
+        <p><strong>© 2026 CONFERÊNCIA DESPERTAR</strong></p>
+        <p>INSTITUTO GÊNOVA CNPJ: 47.415.200/0001-79.</p>
     </footer>
 
 </body>
